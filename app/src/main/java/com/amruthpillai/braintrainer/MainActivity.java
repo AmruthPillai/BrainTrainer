@@ -12,9 +12,11 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     Button startGameButton;
-    TextView resultTextView;
+    TextView pointsTextView, sumTextView, resultTextView;
     ArrayList<Integer> answers = new ArrayList<>();
     int locationCorrectAnswer;
+    int score = 0;
+    int numOfQuestions = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         startGameButton = (Button) findViewById(R.id.startButton);
-        TextView sumTextView = (TextView) findViewById(R.id.sumTextView);
+        sumTextView = (TextView) findViewById(R.id.sumTextView);
+        pointsTextView = (TextView) findViewById(R.id.pointsTextView);
         resultTextView = (TextView) findViewById(R.id.resultTextView);
 
         Button button0 = (Button) findViewById(R.id.button0);
@@ -60,11 +63,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chooseAnswer(View view) {
+        numOfQuestions++;
+
         if (view.getTag().toString().equals(Integer.toString(locationCorrectAnswer))) {
             resultTextView.setText("Correct!");
+            score++;
         } else {
             resultTextView.setText("Wrong!");
         }
+
+        pointsTextView.setText(Integer.toString(score) + " / " + Integer.toString(numOfQuestions));
     }
 
     public void startGame(View view) {
