@@ -16,7 +16,7 @@
         android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
         android:onClick="startGame"
-        android:text="Start Game!"
+        android:text="@string/start_game"
         android:textAllCaps="false"
         android:textSize="24sp"
         android:visibility="visible"
@@ -76,7 +76,6 @@
                 android:gravity="fill"
                 android:onClick="chooseAnswer"
                 android:tag="0"
-                android:text="32"
                 android:textAlignment="center"
                 android:textSize="60sp" />
 
@@ -92,7 +91,6 @@
                 android:gravity="fill"
                 android:onClick="chooseAnswer"
                 android:tag="1"
-                android:text="32"
                 android:textAlignment="center"
                 android:textSize="60sp" />
 
@@ -108,7 +106,6 @@
                 android:gravity="fill"
                 android:onClick="chooseAnswer"
                 android:tag="2"
-                android:text="32"
                 android:textAlignment="center"
                 android:textSize="60sp" />
 
@@ -124,7 +121,6 @@
                 android:gravity="fill"
                 android:onClick="chooseAnswer"
                 android:tag="3"
-                android:text="32"
                 android:textAlignment="center"
                 android:textSize="60sp" />
 
@@ -134,12 +130,10 @@
             android:id="@+id/timerTextView"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/holo_green_light"
             android:padding="10dp"
-            android:text="30s"
             android:textAlignment="center"
             android:textSize="28sp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -165,11 +159,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="7dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/holo_orange_light"
             android:padding="10dp"
-            android:text="20/20"
             android:textAlignment="center"
             android:textSize="28sp"
             app:layout_constraintRight_toRightOf="parent"
@@ -182,7 +174,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:onClick="playAgain"
-            android:text="Play Again?"
+            android:text="@string/play_again"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

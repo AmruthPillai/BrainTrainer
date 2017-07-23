@@ -13,20 +13,24 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    ConstraintLayout gameConstraintLayout;
+    private ConstraintLayout gameConstraintLayout;
 
-    Button startGameButton, playAgainButton;
-    Button button0;
-    Button button1;
-    Button button2;
-    Button button3;
+    private Button startGameButton;
+    private Button playAgainButton;
+    private Button button0;
+    private Button button1;
+    private Button button2;
+    private Button button3;
 
-    TextView timerTextView, pointsTextView, sumTextView, resultTextView;
-    ArrayList<Integer> answers = new ArrayList<>();
+    private TextView timerTextView;
+    private TextView pointsTextView;
+    private TextView sumTextView;
+    private TextView resultTextView;
+    private final ArrayList<Integer> answers = new ArrayList<>();
 
-    int locationCorrectAnswer;
-    int score = 0;
-    int numOfQuestions = 0;
+    private int locationCorrectAnswer;
+    private int score = 0;
+    private int numOfQuestions = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.button3);
     }
 
-    public void generateQuestion() {
+    private void generateQuestion() {
         answers.clear();
 
         Random random = new Random();
