@@ -35,19 +35,18 @@
         android:id="@+id/sumTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
         android:padding="10dp"
-        android:text="31 + 12"
         android:textAlignment="center"
         android:textSize="28sp"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintLeft_toRightOf="@+id/timerTextView"
         app:layout_constraintRight_toLeftOf="@+id/pointsTextView"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.508"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp" />
+        tools:layout_constraintRight_creator="1" />
 
     <TextView
         android:id="@+id/pointsTextView"
@@ -121,7 +120,7 @@
             android:layout_rowWeight="1"
             android:gravity="fill"
             android:onClick="chooseAnswer"
-            android:tag="0"
+            android:tag="1"
             android:text="32"
             android:textAlignment="center"
             android:textSize="60sp" />
@@ -137,7 +136,7 @@
             android:layout_rowWeight="1"
             android:gravity="fill"
             android:onClick="chooseAnswer"
-            android:tag="0"
+            android:tag="2"
             android:text="32"
             android:textAlignment="center"
             android:textSize="60sp" />
@@ -153,7 +152,7 @@
             android:layout_rowWeight="1"
             android:gravity="fill"
             android:onClick="chooseAnswer"
-            android:tag="0"
+            android:tag="3"
             android:text="32"
             android:textAlignment="center"
             android:textSize="60sp" />
@@ -164,7 +163,6 @@
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Correct!"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
